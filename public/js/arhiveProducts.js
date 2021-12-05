@@ -23,10 +23,12 @@ allProd.classList.remove("nav-active");
 activeProd.classList.remove("nav-active");
 archiveProd.classList.add("nav-active");
 
+const url = `https://iviv-wristwatch.herokuapp.com/admin/archive-products-api`
+// const url = `http://localhost:5000/admin/archive-products-api`
 
 // Displaying Products
 const prodsContainer = document.querySelector("#products-container");
-fetch('https://iviv-wristwatch.herokuapp.com/admin/archive-products-api')
+fetch(url)
     .then(res => res.json())
     .then(res => {
         if(res.archiveProducts){

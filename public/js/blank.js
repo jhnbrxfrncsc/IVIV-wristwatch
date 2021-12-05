@@ -25,10 +25,14 @@ const user_id = localStorage.getItem("userId");
 const cartId = params.get("cartId");
 const prodName = params.get("prodName");
 
+const url = `https://iviv-wristwatch.herokuapp.com/`;
+// const url = `http://localhost:5000/`;
+
+
 // Methods
 if(method === "archiving" || method === "activating"){
     message.innerHTML = `${method} ${productName}`;
-    fetch(`https://iviv-wristwatch.herokuapp.com/admin/active-archive/${prodId}`, { method: "PUT" })
+    fetch(`${url}admin/active-archive/${prodId}`, { method: "PUT" })
         .then(res => res.json())
         .then(res => {
             alert(res.message);
@@ -36,7 +40,7 @@ if(method === "archiving" || method === "activating"){
         })
 } else if(method === "deleteProd") {
         message.innerHTML = `Deleting ${productName}`;
-        fetch(`https://iviv-wristwatch.herokuapp.com/admin/delete-product/${prodId}`, { method: "DELETE" })
+        fetch(`${url}admin/delete-product/${prodId}`, { method: "DELETE" })
             .then(res => res.json())
             .then(res => {
                 alert(res.message);
@@ -44,7 +48,7 @@ if(method === "archiving" || method === "activating"){
             })
 } else if(method === "deleteUser") {
     message.innerHTML = `Deleting ${email}`;
-    fetch(`https://iviv-wristwatch.herokuapp.com/delete-user/${userId}`, { method: "DELETE" })
+    fetch(`${url}delete-user/${userId}`, { method: "DELETE" })
         .then(res => res.json())
         .then(res => {
             alert(res.message);
@@ -52,7 +56,7 @@ if(method === "archiving" || method === "activating"){
         })
 } else if(method === "deleteCartItem"){
     message.innerHTML = `Removing Cart Item: ${prodName}`;
-    fetch(`https://iviv-wristwatch.herokuapp.com/remove-cart-item/${user_id}`, { 
+    fetch(`${url}remove-cart-item/${user_id}`, { 
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

@@ -18,31 +18,35 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/nav.css">
-        <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="css/footer.css">
     </head>
     <body>
         <!-- Navbar -->
         <nav class="navbar"></nav>
         
+        <section class="customer-nav">
+            <ul class="admin-nav-list">
+                <li class="admin-nav-link">
+                    <a id="my-profile" href="profile">My Profile</a>
+                </li>
+                <span>|</span>
+                <li class="admin-nav-link">
+                    <a id="my-orders" href="my-orders">My Orders</a>
+                </li>
+            </ul>
+        </section>
 
-        <div class="container">
-            <h1>My Profile</h1>
-        </div>
+        <section class="profile-container">
+            <article class="profile"></article>
+        </section>
 
         <!-- Footer -->
         <footer></footer>
 
-        <script>
-            const isAdmin = localStorage.getItem("isAdmin");
-            window.onload = () => {
-                if(isAdmin === "true"){
-                    window.location.replace('/admin/dashboard');
-                }
-            }
-        </script>
-        <script src="js/nav.js"></script>
         <script src="js/footer.js"></script>
+        <script src="js/nav.js"></script>
         <script src="js/profile.js"></script>
     </body>
 </html>

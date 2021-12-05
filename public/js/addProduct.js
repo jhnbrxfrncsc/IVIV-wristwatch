@@ -66,6 +66,8 @@ const productName = document.querySelector('#product-name');
 const productBrand = document.querySelector('#product-brand');
 const productDesc = document.querySelector('#product-desc');
 
+const url = `https://iviv-wristwatch.herokuapp.com/admin/add-product`;
+// const url = `http://localhost:5000/admin/add-product`
 
 // ADD PRODUCT
 newProdForm.addEventListener("submit", (e) => {
@@ -77,7 +79,7 @@ newProdForm.addEventListener("submit", (e) => {
         productPrice: productPrice.value,
         productDiscount: productDiscount.value === '' ? 0 : productDiscount.value
     };
-    fetch('https://iviv-wristwatch.herokuapp.com/admin/add-product', {
+    fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

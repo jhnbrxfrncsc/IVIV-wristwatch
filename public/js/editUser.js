@@ -1,6 +1,6 @@
 const issAdmin = localStorage.getItem("isAdmin");
 window.onload = () => {
-    if(issAdmin === "false" || !isAdmin){
+    if(issAdmin === "false" || !issAdmin){
         alert("Only Authorized users can access this page. Redirecting you to homepage");
         window.location.replace('/');
     }
@@ -25,8 +25,10 @@ const lastName = document.querySelector("#lastName");
 const email = document.querySelector("#email");
 const isCustomer = document.querySelector("#isAdmin");
 
+const url = `https://iviv-wristwatch.herokuapp.com/`;
+// const url = `http://localhost:5000/`;
 
-fetch(`https://iviv-wristwatch.herokuapp.com/get-user/${userId}`)
+fetch(`${url}get-user/${userId}`)
 .then(res => res.json())
 .then(res => {
         firstName.value = res.firstName;
@@ -42,7 +44,7 @@ fetch(`https://iviv-wristwatch.herokuapp.com/get-user/${userId}`)
                 email: email.value,
                 isAdmin: isCustomer.value === "true" ? true : false
             }
-            sendData(`https://iviv-wristwatch.herokuapp.com/edit-user/${res._id}`, updatedUser);
+            sendData(`${url}edit-user/${res._id}`, updatedUser);
         });
     })
 

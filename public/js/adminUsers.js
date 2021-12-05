@@ -17,10 +17,12 @@ adminProducts.classList.remove("nav-active");
 adminUsers.classList.add("nav-active");
 adminOrders.classList.remove("nav-active");
 
+const url = `https://iviv-wristwatch.herokuapp.com/get-users-api`;
+// const url = `http://localhost:5000/get-users-api`;
 
 const userId = localStorage.getItem("userId");
 const tableData = document.querySelector("#table-data");
-fetch("https://iviv-wristwatch.herokuapp.com/get-users-api")
+fetch(url)
     .then(res => res.json())
     .then(res => {
         const users = res.filter(user => user._id !== userId);

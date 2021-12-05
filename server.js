@@ -73,6 +73,16 @@ app.get('/profile', (req, res) => {
     res.sendFile(path.join(staticPath, "profile.html"));
 });
 
+// edit user
+app.get("/user-edit", (req, res) => {
+    res.sendFile(path.join(staticPath, "userEdit.html"));
+})
+
+// orders
+app.get("/my-orders", (req, res) => {
+    res.sendFile(path.join(staticPath, "my-orders.html"));
+})
+
 // Shop
 app.get('/shop', (req, res) => {
     res.sendFile(path.join(staticPath, "shop.html"));

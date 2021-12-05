@@ -113,10 +113,12 @@ function thousands_separators(num) {
     return num_parts.join(".");
 }
 
+const url = `https://iviv-wristwatch.herokuapp.com/`;
+// const url = `http://localhost:5000/`;
 
 const incrementQty = (qty, productName, productBrand) => {
     if(qty < 50){
-        fetch(`https://iviv-wristwatch.herokuapp.com/add-cart-item`, { 
+        fetch(`${url}add-cart-item`, { 
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -137,7 +139,7 @@ const incrementQty = (qty, productName, productBrand) => {
 const decrementQty = (qty, productName, productBrand) => {
     console.log(qty);
     if(qty > 1){
-        fetch(`https://iviv-wristwatch.herokuapp.com/add-cart-item`, { 
+        fetch(`${url}add-cart-item`, { 
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

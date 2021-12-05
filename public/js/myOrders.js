@@ -31,7 +31,10 @@ function thousands_separators(num) {
     return num_parts.join(".");
 }
 
-fetch(`https://iviv-wristwatch.herokuapp.com/orders/${userId}`)
+const url = `https://iviv-wristwatch.herokuapp.com/`;
+// const url = `http://localhost:5000/`;
+
+fetch(`${url}orders/${userId}`)
     .then(res => res.json())
     .then(res => {
         let allOrders = res.orders.map(order => {

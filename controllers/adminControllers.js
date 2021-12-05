@@ -1,6 +1,6 @@
 import Product from '../models/Product.js';
 
-let prodId = '';
+let productId = '';
 
 // Fetch all Products
 export const getAllProducts = async (req, res) => {
@@ -55,7 +55,7 @@ export const editProduct = async (req, res) => {
         );
     } else if(result && product.productName === req.body.productName){
         const updatedProd = await Product.findByIdAndUpdate(req.params.prodId, req.body, {new: true})
-        prodId = product._id;
+        productId = req.params.prodId;
         res.json(
             {
                 message: `Successfully updated to "${updatedProd.productName}"`,
@@ -74,10 +74,10 @@ export const addProduct = async (req, res) => {
     if(result === null){
         const newProduct = new Product(req.body);
         newProduct.save((err, result) => {
-            prodId = result._id;
             if(err) {
                 return res.send(err);
             } else {
+                productId = result._id;
                 return res.json(
                     {
                         message: `new product: ${result.productName}`,
@@ -102,14 +102,14 @@ export const addProductImages = async (req, res) => {
     const files = req.files.map(file => {
         return file.filename;
     })
-    const result = await Product.findById(prodId);
+    const result = await Product.findById(productId);
     if(result) {
         if(files.length >= 1 && files.length <=3){
             result.productImage = files;
-            await Product.findByIdAndUpdate(prodId, result, {new: true})
+            await Product.findByIdAndUpdate(productId, result, {new: true})
             res.redirect("/admin/products");
         } else {
-            await Product.findByIdAndUpdate(prodId, result, {new: true})
+            await Product.findByIdAndUpdate(productId, result, {new: true})
             res.redirect("/admin/products");
         }
     } else {

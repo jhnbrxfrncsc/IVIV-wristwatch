@@ -17,7 +17,10 @@ const user_id = localStorage.getItem("userId");
 
 const prodsContainer = document.querySelector(".product-container");
 
-fetch(`https://iviv-wristwatch.herokuapp.com/admin/active-products-api`)
+const url = `https://iviv-wristwatch.herokuapp.com/`;
+// const url = `http://localhost:5000/`;
+
+fetch(`${url}admin/active-products-api`)
     .then(res => res.json())
     .then(res => {
         if(res.activeProducts){
@@ -110,7 +113,7 @@ const addToCart = (pName, pBrand, pPrice, pImg, qty) => {
         qty
     };
     if(user_id){
-        fetch(`https://iviv-wristwatch.herokuapp.com/add-cart-item`, { 
+        fetch(`${url}add-cart-item`, { 
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

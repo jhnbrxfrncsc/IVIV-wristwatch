@@ -16,8 +16,10 @@ productContainers.forEach((item, i) => {
 })
 
 const prodsContainer = document.querySelector(".product-container");
+const url = `https://iviv-wristwatch.herokuapp.com/`;
+// const url = `http://localhost:5000/`;
 
-fetch(`https://iviv-wristwatch.herokuapp.com/admin/active-products-api`)
+fetch(`${url}admin/active-products-api`)
     .then(res => res.json())
     .then(res => {
         console.log(res.activeProducts);
