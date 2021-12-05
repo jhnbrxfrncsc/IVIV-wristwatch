@@ -30,7 +30,7 @@ function thousands_separators(num) {
     return num_parts.join(".");
 }
 
-fetch(`http://localhost:5000/orders/get-orders`)
+fetch(`https://iviv-wristwatch.herokuapp.com/orders/get-orders`)
     .then(res => res.json())
     .then(res => {
         let allOrders = res.map(order => {

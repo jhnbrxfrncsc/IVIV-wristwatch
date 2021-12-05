@@ -3,7 +3,6 @@ const user_LN = localStorage.getItem("lastName");
 const user_email = localStorage.getItem("email");
 const user_isAdmin = localStorage.getItem("isAdmin");
 const user_token = localStorage.getItem("token");
-const user_fullName = `${user_FN} ${user_LN}`;
 const dashboardBtn = document.querySelector("#dashboard");
 
 

@@ -14,7 +14,7 @@ if(!userId){
     `;
 }
 
-fetch(`http://localhost:5000/get-cart-items/${userId}`)
+fetch(`https://iviv-wristwatch.herokuapp.com/get-cart-items/${userId}`)
     .then(res => res.json())
     .then(res => {
         if(res.bool){
@@ -85,7 +85,7 @@ fetch(`http://localhost:5000/get-cart-items/${userId}`)
                     totalAmount: totalBill,
                     purchaseDate: new Date().toISOString().split('T')[0]
                 }
-                fetch(`http://localhost:5000/orders/add-order`, { 
+                fetch(`https://iviv-wristwatch.herokuapp.com/orders/add-order`, { 
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -116,7 +116,7 @@ function thousands_separators(num) {
 
 const incrementQty = (qty, productName, productBrand) => {
     if(qty < 50){
-        fetch(`http://localhost:5000/add-cart-item`, { 
+        fetch(`https://iviv-wristwatch.herokuapp.com/add-cart-item`, { 
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -137,7 +137,7 @@ const incrementQty = (qty, productName, productBrand) => {
 const decrementQty = (qty, productName, productBrand) => {
     console.log(qty);
     if(qty > 1){
-        fetch(`http://localhost:5000/add-cart-item`, { 
+        fetch(`https://iviv-wristwatch.herokuapp.com/add-cart-item`, { 
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

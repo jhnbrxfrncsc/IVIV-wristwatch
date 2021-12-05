@@ -26,7 +26,7 @@ const email = document.querySelector("#email");
 const isCustomer = document.querySelector("#isAdmin");
 
 
-fetch(`http://localhost:5000/get-user/${userId}`)
+fetch(`https://iviv-wristwatch.herokuapp.com/get-user/${userId}`)
 .then(res => res.json())
 .then(res => {
         firstName.value = res.firstName;
@@ -42,7 +42,7 @@ fetch(`http://localhost:5000/get-user/${userId}`)
                 email: email.value,
                 isAdmin: isCustomer.value === "true" ? true : false
             }
-            sendData(`http://localhost:5000/edit-user/${res._id}`, updatedUser);
+            sendData(`https://iviv-wristwatch.herokuapp.com/edit-user/${res._id}`, updatedUser);
         });
     })
 

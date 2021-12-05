@@ -20,7 +20,7 @@ adminOrders.classList.remove("nav-active");
 
 const userId = localStorage.getItem("userId");
 const tableData = document.querySelector("#table-data");
-fetch("http://localhost:5000/get-users-api")
+fetch("https://iviv-wristwatch.herokuapp.com/get-users-api")
     .then(res => res.json())
     .then(res => {
         const users = res.filter(user => user._id !== userId);

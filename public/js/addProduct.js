@@ -77,7 +77,7 @@ newProdForm.addEventListener("submit", (e) => {
         productPrice: productPrice.value,
         productDiscount: productDiscount.value === '' ? 0 : productDiscount.value
     };
-    fetch('http://localhost:5000/admin/add-product', {
+    fetch('https://iviv-wristwatch.herokuapp.com/admin/add-product', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

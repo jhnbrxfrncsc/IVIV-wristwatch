@@ -27,7 +27,7 @@ function thousands_separators(num) {
     return num_parts.join(".");
 }
 
-fetch(`http://localhost:5000/admin/get-product/${prodId}`)
+fetch(`https://iviv-wristwatch.herokuapp.com/admin/get-product/${prodId}`)
     .then(res => res.json())
     .then(res => {
         const {
@@ -136,7 +136,7 @@ fetch(`http://localhost:5000/admin/get-product/${prodId}`)
             cartBtn.innerHTML = "Add to cart";
             }, 3000);
             if(user_id){
-                fetch(`http://localhost:5000/add-cart-item`, { 
+                fetch(`https://iviv-wristwatch.herokuapp.com/add-cart-item`, { 
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -171,7 +171,7 @@ fetch(`http://localhost:5000/admin/get-product/${prodId}`)
                 item.scrollLeft -= containerWidth;
             });
         })
-        fetch(`http://localhost:5000/admin/active-products-api`)
+        fetch(`https://iviv-wristwatch.herokuapp.com/admin/active-products-api`)
             .then(res => res.json())
             .then(res => {
                 if(res.activeProducts){

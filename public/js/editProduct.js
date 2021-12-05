@@ -44,7 +44,7 @@ const productDiscountedPrice = document.querySelector("#discounted-price");
 const params = new URLSearchParams(window.location.search);
 const prodId = params.get("prodId");
 
-fetch(`http://localhost:5000/admin/get-product/${prodId}`)
+fetch(`https://iviv-wristwatch.herokuapp.com/admin/get-product/${prodId}`)
     .then(res => res.json())
     .then(res => {
         if(res.bool) {
@@ -66,7 +66,7 @@ fetch(`http://localhost:5000/admin/get-product/${prodId}`)
                     productPrice: productPrice.value,
                     productDiscount: productDiscount.value
                 };
-                fetch(`http://localhost:5000/admin/product-edit/${res.product._id}`, {
+                fetch(`https://iviv-wristwatch.herokuapp.com/admin/product-edit/${res.product._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
