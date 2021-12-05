@@ -88,7 +88,7 @@ fetch(`${url}get-cart-items/${userId}`)
                     totalAmount: totalBill,
                     purchaseDate: new Date().toISOString().split('T')[0]
                 }
-                fetch(`https://iviv-wristwatch.herokuapp.com/orders/add-order`, { 
+                fetch(`${url}orders/add-order`, { 
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
