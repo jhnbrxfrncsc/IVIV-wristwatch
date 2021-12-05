@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IVIV - Best Wristwatch Online Store</title>
+        <!-- FONT AWESOME CDN -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mate+SC&family=Oswald:wght@400;500;700&family=Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Logo -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/signup.css">
+    </head>
+    <body>
+
+        <!-- SPINNER -->
+        <i class="fas fa-spinner fa-pulse loader"></i>
+
+        <!-- Alert box -->
+        <div class="alert-box">
+            <i class="fas fa-times-square alert-icon"></i>
+            <p class="alert-msg">
+                Error message
+            </p>
+        </div>
+        
+        <section class="fa-5x">
+            <div class="container">
+                <figure>
+                    <h1>Register</h1>
+                </figure>
+
+                <form class="signup-form">
+                    <input 
+                        type="text"
+                        id="firstName"
+                        autocomplete="off"
+                        placeholder="Enter your First Name..."
+                        required
+                    >
+                    <input 
+                        type="text"
+                        id="lastName"
+                        autocomplete="off"
+                        placeholder="Enter your Last Name..."
+                        required
+                    >
+                    <input 
+                        type="email"
+                        id="email"
+                        autocomplete="off"
+                        placeholder="Enter your Email..."
+                        required
+                    >
+                    <input 
+                        type="password"
+                        id="password"
+                        autocomplete="off"
+                        placeholder="Enter your Password..."
+                        required
+                    >
+                    <div class="form-control">
+                        <input 
+                            type="checkbox" 
+                            class="checkbox"
+                            id="terms-and-conditions"
+                        >
+                        <label for="terms-and-conditions">
+                            agree to our <a href="#"> terms and conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        create account
+                    </button>
+                    <a href="/login" class="login-link">
+                        already have an account? Log in here
+                    </a>
+                </form>
+            </div>
+
+        </section>
+
+        <script src="js/signup.js"></script>
+    </body>
+</html>

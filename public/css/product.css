@@ -1,0 +1,266 @@
+:root {
+    --font-1: 'Spartan';
+    --font-2: 'Libre Baskerville';
+    --font-3: 'Oswald';
+    --font-4: 'Mate SC';
+}
+
+.product-details {
+    width: 100%;
+    padding: 60px 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.product-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-images .image-slider img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid rgb(218, 218, 218);
+}
+
+.image-slider{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.product-images .image-active img {
+    height: 600px;
+    width: 400px;
+    object-fit:cover;
+}
+.image-active {
+    margin: 0 50px;
+}
+
+.product-desc {
+    padding: 20px;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-desc h1 {
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.product-desc h2 {
+    color: #747474;
+    font-weight: 700;
+    font-family: var(--font-2);
+    font-size: 1.5em;
+}
+
+.product-desc p {
+    margin-top: 20px;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price {
+    margin-left: 5px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.price-off {
+    color: red;
+    margin-left: 12px;
+}
+
+.product-desc .desc {
+    font-size: 1em;
+    font-family: var(--font-2);
+}
+
+
+/* PRODUCT ACTIONS */
+.product-actions {
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.product-actions .add-to-wishlist, 
+.product-actions .add-to-cart {
+    border: none;
+    color: #FFFFFF;
+    background-color: #000000;
+    width: 150px;
+    height: 60px;
+    align-self: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.add-to-wishlist,
+.add-to-cart {
+    margin-right: 20px;
+}
+
+.add-to-wishlist:hover, .add-to-cart:hover {
+    opacity: .8;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #747474;
+}
+
+
+ /*  */
+/*  */
+/*  */
+.best-sellers {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    margin: 40px 0;
+}
+
+.best-sellers header {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.best-sellers header h1 {
+    font-family: var(--font-2);
+    font-size: 41px;
+    font-weight: 700;
+}
+
+.best-sellers header h5 {
+    font-family: var(--font-2);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.product-container {
+    padding: 0 5vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card-2 {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin: 0 40px;
+}
+
+.product-image-2 {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb-2 {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag-2{
+    font-family: var(--font-3);
+    position: absolute;
+    color: #FFFFFF;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    right: 10px;
+    top: 10px;
+    text-transform: uppercase;
+}
+
+.product-info-2 {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.product-brand-2 {
+    font-family: var(--font-2);
+    text-transform: uppercase;
+}
+
+.product-desc-2 {
+    font-family: var(--font-2);
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: .5;
+    font-size: .85em;
+    margin: 5px 0;
+}
+
+.price-2 {
+    font-weight: 900;
+    font-size: 20px;
+    font-family: var(--font-3);
+}
+
+.actual-price-2 {
+    font-family: var(--font-3);
+    margin-left: 5px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.prev-btn, .next-btn {
+    border: none;
+    width: 5vw;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.904), rgba(250, 250, 250, 0.4));
+    cursor: pointer;
+    z-index: 8;
+}
+
+.prev-btn i, .next-btn i {
+    font-size: 2em;
+    opacity: 0.2;
+}
+
+.prev-btn:hover i, .next-btn:hover i {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}

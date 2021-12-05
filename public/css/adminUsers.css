@@ -1,0 +1,45 @@
+.container {
+    background-color: rgb(207, 206, 205);
+}
+
+table {
+    border-collapse: collapse;
+    min-height: 87vh;
+    width: 100%;
+}
+
+td {
+    border: 1.5px solid #000000;
+    text-align: start;
+    padding: 15px;
+}
+
+th {
+    background-color: #000000;
+    border: 1.5px solid #3f3f3f;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: start;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.edit-btn, .delete-btn{
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+.edit-btn i, .delete-btn i {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(202, 201, 201);
+}
+tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}

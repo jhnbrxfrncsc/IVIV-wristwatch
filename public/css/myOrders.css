@@ -1,0 +1,51 @@
+:root {
+    --font-1: 'Spartan';
+    --font-2: 'Libre Baskerville';
+    --font-3: 'Oswald';
+    --font-4: 'Mate SC';
+}
+
+
+.orders-nav { 
+    position: absolute;
+    top: 50px;
+    height: 50px;
+    width: 100%;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #00000025;
+}
+
+
+.order-list {
+    margin: 80px auto;
+}
+
+table {
+    border-collapse: collapse;
+    height: 100%;
+    width: 90vw;
+    margin-top: 40px;
+}
+
+td, th {
+    padding: 20px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+th{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+tbody tr:nth-child(even){
+    background-color: #bebdbd;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px 0;
+}

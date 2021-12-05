@@ -1,0 +1,115 @@
+:root {
+    --font-1: 'Spartan';
+    --font-2: 'Libre Baskerville';
+    --font-3: 'Oswald';
+    --font-4: 'Mate SC';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    height: 100vh;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    position: absolute;
+    width: 600px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #161515;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.container figure {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.container figure h1 {
+    font-size: .75em;
+    text-align: center;
+    font-family: var(--font-2);
+    color: #FFFFFF;
+}
+
+form {
+    padding: 0 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #000000;
+    border: none;
+    outline: none;
+    margin: 35px 0;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: var(--font-2);
+}
+
+input[type="text"]:focus ,
+input[type="email"]:focus ,
+input[type="password"]:focus ,
+input[type="text"]:valid ,
+input[type="password"]:valid,
+input[type="email"]:valid  {
+    box-shadow: 0 1px 10px #835a01;
+}
+
+
+.submit-btn {
+    text-transform: capitalize;
+    width: 100%;
+    height: 60px;
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-family: var(--font-2);
+    font-weight: 700;
+    margin-top: 50px;
+    transition: .6s;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 1px 20px #FFFFFF;
+}
+
+.register-link {
+    font-size: 16px;
+    width: 100%;
+    color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+}
+

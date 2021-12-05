@@ -1,0 +1,55 @@
+:root {
+    --font-1: 'Spartan';
+    --font-2: 'Libre Baskerville';
+    --font-3: 'Oswald';
+    --font-4: 'Mate SC';
+}
+
+.container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 6em;
+    font-family: var(--font-2);
+}
+
+.container h2 {
+    font-size: 2em;
+    font-family: var(--font-1);
+    margin-bottom: 12px;
+}
+
+.container p {
+    font-size: 1em;
+    font-family: var(--font-2);
+    opacity: .8;
+}
+
+
+.container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 200px;
+    font-size: .75em;
+    margin: 50px 0;
+    text-decoration: none;
+    background-color: #000000;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: var(--font-2);
+    transition: .7s;
+}
+
+.container a:hover {
+    opacity: .8;
+}

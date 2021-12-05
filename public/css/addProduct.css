@@ -1,0 +1,214 @@
+:root {
+    --font-1: 'Spartan';
+    --font-2: 'Libre Baskerville';
+    --font-3: 'Oswald';
+    --font-4: 'Mate SC';
+}
+
+
+form {
+    background-color: #161515;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 50px;
+    min-height: 100vh;
+}
+
+form h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: var(--font-2);
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
+}
+
+.upload-imgs {
+    min-height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 20px 0 20px;
+}
+
+.upload-imgs p {
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: var(--font-1);
+}
+
+.upload-catalouge {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.uploaded-photo {
+    width: 450px;
+    height: 650px;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    background-size: cover;
+    margin: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.uploaded-photo:hover {
+    opacity: 0.5;
+    background-size: cover;
+}
+
+.image-preview {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #000000;
+    border: none;
+    outline: none;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: var(--font-2);
+    word-spacing: 1.5px;
+}
+
+textarea {
+    overflow: hidden;
+    height: 300px;
+}
+
+input[type="text"]:focus, 
+input[type="text"]:valid,
+input[type="number"]:focus, 
+input[type="number"]:valid,
+textarea:focus,
+textarea:valid  {
+    box-shadow: 0 1px 10px #c9c6bf;
+}
+
+input, textarea {
+    font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.product-price {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.fullname-field {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.submit-btn {
+    text-transform: capitalize;
+    width: 100%;
+    height: 60px;
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-family: var(--font-2);
+    font-weight: 700;
+    margin-top: 30px;
+    transition: .6s;
+    margin: 0 10px;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 1px 20px #FFFFFF;
+}   
+
+.form-btns {
+    margin: 40px 0 0 0;
+    display: flex;
+}
+
+#save-btn {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    display: none;
+    z-index: 2;
+}
+
+.alert-box {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    min-height: 150px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, .5);
+    padding: 30px;
+    transition: 1s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.alert-icon {
+    color: red;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    font-size: 5em;
+}
+
+.alert-msg {
+    opacity: .7;
+    color: red;
+    text-align: center;
+    font-family: var(--font-1);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.show-alert {
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
+    z-index: 1;
+}

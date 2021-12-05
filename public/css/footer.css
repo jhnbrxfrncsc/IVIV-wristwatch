@@ -1,0 +1,92 @@
+:root {
+    --font-1: 'Spartan';
+    --font-2: 'Libre Baskerville';
+    --font-3: 'Oswald';
+    --font-4: 'Mate SC';
+}
+
+footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .sub-1 .footer-links i {
+    font-weight: 200;
+}
+
+footer  .sub-1 {
+    background: #272626;
+    /* height: 100%; */
+    color: #FFFFFF;
+    padding: 50px;
+    font-family: var(--font-3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sub-1 .footer-links {
+    margin: 30px;
+}
+
+.sub-1 .footer-links h1 {
+    font-family: var(--font-3);
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.sub-1 .footer-links h3 {
+    font-size: 1.2em;
+    margin: 16px 0;
+}
+
+.sub-1 .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-family: var(--font-3);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.sub-1 .footer-links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .sub-2 {
+    height: 10vh;
+    background: #000000;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .5em;
+    font-family: var(--font-2);
+}
+
+/* Social Colors */
+.fa-facebook-f, 
+.footer-links .fb a:hover {
+    color: #4267B2;
+}
+.fa-instagram {
+    background: linear-gradient(to top, #f15823 0%, #a7058e 100%);
+    border-radius: 100%;
+}
+.fa-twitter,
+.footer-links .twt a:hover {
+    color: #00aae6;
+}
+.fa-pinterest,
+.footer-links .pint a:hover {
+    color: #E60023;
+}
+
+.footer-links .ig-text a:hover {
+    background-image: linear-gradient(to top, #f15823 0%, #a7058e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
