@@ -28,7 +28,7 @@ const url = `https://iviv-wristwatch.herokuapp.com`;
 
 // Displaying Products
 const prodsContainer = document.querySelector("#products-container");
-fetch(`${url}admin/active-products-api`)
+fetch(`${url}/admin/active-products-api`)
     .then(res => res.json())
     .then(res => {
         if(res.activeProducts){
