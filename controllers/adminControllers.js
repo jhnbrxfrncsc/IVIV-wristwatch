@@ -104,6 +104,7 @@ export const addProductImages = async (req, res) => {
     })
     const result = await Product.findById(productId);
     if(result) {
+        productId = result._id;
         if(files.length >= 1 && files.length <=3){
             result.productImage = files;
             await Product.findByIdAndUpdate(productId, result, {new: true})
