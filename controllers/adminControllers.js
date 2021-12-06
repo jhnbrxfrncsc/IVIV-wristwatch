@@ -46,22 +46,20 @@ export const getArchiveProducts = async (req, res) => {
 export const editProduct = async (req, res) => {
     const result = await Product.findOne({productName: req.body.productName});
     const product = await Product.findById(req.params.prodId);
-    productId = result._id;
-    
-    if(result && product.productName !== req.body.productName){
-        res.json(
-            {
-                message: `Product Name: "${req.body.productName}" already exist"`,
-                bool: false,
-            }
-        );
-    } else if(result && product.productName === req.body.productName){
+    if(!result || product.productName === req.body.productName){
         const updatedProd = await Product.findByIdAndUpdate(req.params.prodId, req.body, {new: true})
         productId = req.params.prodId;
         res.json(
             {
                 message: `Successfully updated to "${updatedProd.productName}"`,
                 bool: true,
+            }
+        );
+    } else if(result._id !== product._id && result.productName === req.body.productName){
+        res.json(
+            {
+                message: `Product Name: "${req.body.productName}" already exist"`,
+                bool: false,
             }
         );
     } else {
