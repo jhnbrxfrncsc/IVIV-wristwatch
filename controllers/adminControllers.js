@@ -46,6 +46,8 @@ export const getArchiveProducts = async (req, res) => {
 export const editProduct = async (req, res) => {
     const result = await Product.findOne({productName: req.body.productName});
     const product = await Product.findById(req.params.prodId);
+    productId = result._id;
+    
     if(result && product.productName !== req.body.productName){
         res.json(
             {
@@ -104,7 +106,6 @@ export const addProductImages = async (req, res) => {
     })
     const result = await Product.findById(productId);
     if(result) {
-        productId = result._id;
         if(files.length >= 1 && files.length <=3){
             result.productImage = files;
             await Product.findByIdAndUpdate(productId, result, {new: true})
