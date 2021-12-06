@@ -1,21 +1,17 @@
 const issAdmin = localStorage.getItem("isAdmin");
 window.onload = () => {
-    if(!issAdmin){
+    if(issAdmin === "true"){
+        window.location.replace('/admin/profile');
+    } else if(!issAdmin){
         alert("Only Authorized users can access this page. Redirecting you to homepage");
         window.location.replace('/');
     }
 }
+const myProfile = document.querySelector("#my-profile");
+const myOrders = document.querySelector("#my-orders");
 
-const adminProfile = document.querySelector("#profile");
-const adminProducts = document.querySelector("#products");
-const adminUsers = document.querySelector("#users");
-const adminOrders = document.querySelector("#orders");
-
-
-adminProfile.classList.add("nav-active");
-adminProducts.classList.remove("nav-active");
-adminUsers.classList.remove("nav-active");
-adminOrders.classList.remove("nav-active");
+myProfile.classList.add("nav-active");
+myOrders.classList.remove("nav-active");
 
 // URL PARAMS
 const userId = localStorage.getItem("userId");

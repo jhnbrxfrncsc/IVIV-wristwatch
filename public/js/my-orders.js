@@ -1,8 +1,8 @@
 const issAdmin = localStorage.getItem("isAdmin");
 window.onload = () => {
-    console.log(issAdmin);
-    if(!issAdmin){
-        alert("Only Authorized users can access this page. Redirecting you to homepage");
+    if(issAdmin === "true"){
+        window.location.replace('/admin/my-orders');
+    } else if(!issAdmin) {
         window.location.replace('/');
     }
 }

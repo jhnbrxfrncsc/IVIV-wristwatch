@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="css/nav.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="css/profile.css">
         <link rel="stylesheet" href="css/editUser.css">
     </head>
     <body>
@@ -32,9 +33,19 @@
                 Error message
             </p>
         </div>
+        <section class="customer-nav">
+            <ul class="admin-nav-list">
+                <li class="admin-nav-link">
+                    <a id="my-profile" href="profile">My Profile</a>
+                </li>
+                <span>|</span>
+                <li class="admin-nav-link">
+                    <a id="my-orders" href="my-orders">My Orders</a>
+                </li>
+            </ul>
+        </section>
 
         <div class="container">
-            <header class="admin-nav"></header>
             <form id="edit-user-form">
                 <h1>Edit User Details</h1>
                 <div class="fullname-field">
@@ -80,7 +91,6 @@
 
         <script src="js/nav.js"></script>
         <script src="js/footer.js"></script>
-        <script src="js/admin.js"></script>
         <script src="js/userEdit.js"></script>
     </body>
 </html>

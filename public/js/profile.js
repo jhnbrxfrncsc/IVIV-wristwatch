@@ -3,7 +3,7 @@ const issAdmin = localStorage.getItem("isAdmin");
 
 window.onload = () => {
     if(issAdmin === "true"){
-        window.location.replace('/admin/dashboard');
+        window.location.replace('/admin/profile');
     } else if(!token || !issAdmin) {
         window.location.replace('/');
     }
