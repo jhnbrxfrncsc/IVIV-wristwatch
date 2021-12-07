@@ -1,8 +1,6 @@
 const issAdmin = localStorage.getItem("isAdmin");
 window.onload = () => {
-    if(issAdmin === "true"){
-        window.location.replace('/admin/profile');
-    } else if(!issAdmin){
+    if(!issAdmin){
         alert("Only Authorized users can access this page. Redirecting you to homepage");
         window.location.replace('/');
     }
